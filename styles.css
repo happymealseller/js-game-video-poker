@@ -1,0 +1,507 @@
+/* ===== GOOGLE FONTS ===== */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Goldman:wght@700&family=Roboto+Mono:wght@300&family=Unica+One&display=swap");
+
+/* ===== INIT CSS ===== */
+.intro-container {
+  height: 95vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Unica One", cursive;
+  font-size: 1.5vmin;
+  color: white;
+}
+
+.init {
+  font-family: "Unica One", cursive;
+  font-size: 3vmin;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.init:hover {
+  color: rgb(247, 155, 222);
+}
+
+/* ===== INIT RULES CSS ===== */
+.poker-info-text {
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+}
+
+.poker-info-btn {
+  font-family: "Unica One", cursive;
+  font-size: 3vmin;
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  margin-top: 3vmin;
+}
+
+.poker-info-btn:hover {
+  color: rgb(0, 109, 33);
+}
+
+.winning-hands-image {
+  max-width: 45vmin;
+  margin-top: 3vmin;
+}
+
+/* ===== MENU CSS ===== */
+.menu-container {
+  height: 95vh;
+  background-color: rgb(245, 201, 233);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23e21b67' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-main-title {
+  font-family: "Unica One", cursive;
+  font-size: 10vmin;
+  color: white;
+  text-shadow: 0.5vmin 0.5vmin 0.5vmin rgb(152, 148, 202);
+}
+
+.menu-sub-title {
+  font-family: "Goldman", cursive;
+  font-size: 2vmin;
+  color: rgb(120, 114, 207);
+  text-shadow: 0.2vmin 0.2vmin white;
+  margin-top: -2vmin;
+  margin-bottom: 2vmin;
+}
+
+.menu-btn {
+  width: 25vmin;
+  font-family: "Unica One", cursive;
+  font-size: 2.5vmin;
+  color: rgb(120, 114, 207);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 1.2vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.1vmin 0.1vmin rgba(0, 0, 0, 0.2);
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
+}
+
+.menu-btn:hover {
+  color: white;
+  background-color: rgba(120, 114, 207, 0.8);
+  box-shadow: 0.1vmin 0.1vmin 0.1vmin 0.1vmin rgba(0, 0, 0, 0.2);
+}
+
+/* ===== VISUAL CSS ===== */
+.visual-container {
+  font-family: "Roboto Mono", monospace;
+  height: 95vh;
+  background-image: url("./src/img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    ". . . . ."
+    ". character character character ."
+    "chatbox chatbox chatbox chatbox chatbox"
+    ". . . . .";
+}
+
+.character-area {
+  grid-area: character;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.character-image {
+  max-height: 55vmin;
+}
+
+.chatbox-area {
+  grid-area: chatbox;
+  display: flex;
+  justify-content: center;
+}
+
+.chatbox-content {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(35, 40, 70, 0.4) 65%,
+    rgba(35, 40, 70, 0.6) 100%
+  );
+
+  width: 70%;
+  height: 30vmin;
+  border: 0.3vmin solid white;
+  border-radius: 1vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.chatbox-content:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(35, 40, 70, 0.5) 65%,
+    rgba(35, 40, 70, 0.7) 100%
+  );
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.7);
+  text-shadow: 0.1vmin 0.1vmin rgba(35, 40, 70, 0.7);
+}
+
+.chatbox-name {
+  max-height: 10vmin;
+  border-top-left-radius: 0.6vmin;
+  border-top-right-radius: 0.6vmin;
+  margin-top: 0.5vmin;
+  margin-left: 2vmin;
+  font-weight: bold;
+  font-size: 3vmin;
+}
+
+.chatbox-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vmin;
+  font-size: 4vmin;
+}
+
+.visual-btn {
+  width: 80%;
+  height: 5vmin;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
+  background: rgba(0, 0, 0, 0.6);
+  border: 0.2vmin solid white;
+  border-radius: 1vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+  font-size: 3vmin;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.visual-btn:hover {
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(35, 40, 70, 0.9) 65%,
+    rgba(35, 40, 70, 0.9) 100%
+  );
+}
+
+/* ===== GAME CSS ===== */
+.game-container {
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+  height: 95vh;
+  background-image: url("./src/img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gc-game-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "bar"
+    "chatbox-small"
+    "character-small"
+    "board"
+    "control";
+}
+
+/* ===== GAME BAR ===== */
+.bar-area {
+  grid-area: bar;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "pt pb pa"
+    "bt bb ba";
+  margin-left: 1.5vmin;
+  margin-right: 1.5vmin;
+  max-height: 5vh;
+}
+
+.point-title {
+  grid-area: pt;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-family: "Goldman", cursive;
+  font-size: 2vmin;
+  color: rgb(35, 150, 255);
+  text-shadow: 0.15vmin 0.15vmin 0.15vmin rgba(0, 0, 0, 0.8);
+}
+
+.bet-title {
+  grid-area: bt;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-family: "Goldman", cursive;
+  font-size: 2vmin;
+  color: rgb(230, 35, 35);
+  text-shadow: 0.15vmin 0.15vmin 0.15vmin rgba(0, 0, 0, 0.8);
+}
+
+.point-area {
+  grid-area: pa;
+  min-width: 4.5vmin;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-family: "Goldman", cursive;
+  max-height: 20vh;
+  font-size: 2vmin;
+
+  color: rgb(35, 150, 255);
+  text-shadow: 0.15vmin 0.15vmin 0.15vmin rgba(0, 0, 0, 0.8);
+}
+
+.bet-area {
+  grid-area: ba;
+  min-width: 4.5vmin;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-family: "Goldman", cursive;
+  font-size: 2vmin;
+
+  color: rgb(230, 35, 35);
+  text-shadow: 0.15vmin 0.15vmin 0.15vmin rgba(0, 0, 0, 0.8);
+}
+
+.point-bar {
+  margin-top: 0.6vmin;
+  margin-left: 1vmin;
+  grid-area: pb;
+  width: 100%;
+  max-height: 1.5vh;
+  appearance: none;
+}
+
+.point-bar::-webkit-progress-bar {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 0.5vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+}
+
+.point-bar::-webkit-progress-value {
+  background-color: rgb(35, 150, 255);
+  border-radius: 0.5vmin;
+}
+
+.bet-bar {
+  margin-top: 0.6vmin;
+  margin-left: 1vmin;
+  grid-area: bb;
+  width: 100%;
+  max-height: 1.5vh;
+  appearance: none;
+}
+
+.bet-bar::-webkit-progress-bar {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 0.5vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+}
+
+.bet-bar::-webkit-progress-value {
+  background-color: rgb(230, 35, 35);
+  border-radius: 0.5vmin;
+}
+
+/* ===== GAME CHATBOX ===== */
+.message-area {
+  grid-area: chatbox-small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  height: 15vh;
+  margin-top: 1vh;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 230, 110, 0.7) 0%,
+    rgba(255, 185, 0, 0.5) 100%
+  );
+
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+  border-radius: 1vmin;
+  font-size: 2vmin;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.message:hover {
+  background: radial-gradient(
+    circle,
+    rgba(255, 231, 110, 0.8) 0%,
+    rgba(255, 184, 0, 0.6) 100%
+  );
+}
+
+.message-rules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 95%;
+  height: 60vh;
+  margin-top: 30vh;
+
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.4) 0%,
+    rgba(148, 187, 233, 0.4) 100%
+  );
+
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+  border-radius: 1vmin;
+
+  font-size: 2vmin;
+  font-weight: bolder;
+}
+
+.message-rules:hover {
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.8) 0%,
+    rgba(148, 187, 233, 0.6) 100%
+  );
+}
+
+/* ===== GAME CHARACTER ===== */
+.character-area-sm {
+  grid-area: character-small;
+  display: flex;
+  justify-content: center;
+}
+
+.character-image-sm {
+  height: 35vmin;
+}
+
+/* ===== GAME BOARD ===== */
+.board-area {
+  grid-area: board;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(68, 235, 90, 0.7) 25%,
+    rgba(13, 92, 29, 0.7) 100%
+  );
+  border: 0.3vmin solid white;
+  border-radius: 1vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+  margin-left: 1.5vmin;
+  margin-right: 1.5vmin;
+  padding: 5vmin;
+}
+
+.card-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+.card1-image,
+.card2-image,
+.card3-image,
+.card4-image,
+.card5-image {
+  max-width: 18%;
+  max-height: 15vh;
+  transform: perspective(75vmin) rotateX(45deg);
+  margin-right: 2vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+  border-radius: 0.5vmin;
+}
+
+.card5-image {
+  margin-right: 4vmin;
+}
+
+.card1-image:hover,
+.card2-image:hover,
+.card3-image:hover,
+.card4-image:hover,
+.card5-image:hover {
+  box-shadow: 0.1vmin 0.1vmin 0.2vmin 0.2vmin rgba(255, 255, 255, 0.8);
+}
+
+/* ===== GAME CONTROL ===== */
+.control-area {
+  grid-area: control;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-area {
+  margin: 1vmin;
+}
+
+.btn-poker {
+  font-size: 1.2vmin;
+  font-weight: bold;
+  margin-top: 1vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  width: 10vmin;
+  height: 3vmin;
+  background: radial-gradient(
+    circle,
+    rgba(255, 230, 110, 0.8) 0%,
+    rgba(255, 185, 0, 0.7) 100%
+  );
+  border: 0.15vmin solid black;
+  border-radius: 0.5vmin;
+  box-shadow: 0.1vmin 0.1vmin 0.1vmin 0.1vmin rgba(0, 0, 0, 0.5);
+}
+
+.btn-poker:hover {
+  background: radial-gradient(
+    circle,
+    rgba(255, 250, 110, 0.8) 0%,
+    rgba(255, 230, 0, 0.7) 100%
+  );
+}
+
+/* ===== END ===== */
