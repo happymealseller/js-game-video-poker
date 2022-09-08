@@ -378,17 +378,17 @@ const initPokerRules = function(){
   appendDiv(".intro-container", createBtn("poker-info-btn", "RETURN", initMenu))
   createText(".poker-info-text", `
     [GENERAL] <br>
-    • The most popular variation of Video poker is known as Jacks or Better • <br>  
-    • The objective of 'Video Poker' is to get the best possible hand from the cards you are dealt • <br> 
+    • The most popular variation of video poker is known as 'Jacks or Better' • <br>  
+    • The objective of the game is to get the best possible hand from the cards you are dealt • <br> 
     • You will be dealt an initial hand of five cards and then asked if you want to replace any of them • <br>
-    • Cards you selected will then be replaced and the outcome of the round is determined • <br> 
+    • Selected cards will then be replaced and the outcome of the round is determined • <br> 
       <br>
     [CARD RANKING]<br>  
     • Highest to lowest • <br>
     • ace, king, queen, jack, ten, nine, eight, seven, six, five, four, three, two • <br> 
       <br>
     [ACE RULES]<br>  
-    • Ace is high, it cannot serve as the low value for a Straight or Straight Flush • <br>
+    • Ace is high, it cannot serve as the low value for a 'Straight' or 'Straight Flush' • <br>
     • ace, two, three, four, five • <br>
       <br>
     [HAND RANKING]<br>
@@ -489,24 +489,24 @@ const initGame = function(){
 
   document.querySelector(".message").innerHTML = `
     [MAIN] <br>    
-    • You start with 15 points. <br>
-    • Accumulate 100 points to join the poker club. <br>
-    • If you fall below 0 points, your lose your chance to join the club. <br>
+    You start with 15 points. <br>
+    Accumulate 100 points to win. <br>
+    If you fall below 0 points, your lose. <br>
     <br>
     [DIFFICULTY] <br>
-     • Easy Mode: The deck is refreshed only when there are not enough cards. <br>
-     • Normal Mode: The deck is refreshed at the end of each round. <br>
+     Easy Mode: Deck is refreshed only when there are not enough cards. <br>
+     Normal Mode: Deck is refreshed at the end of each round. <br>
     <br>
     [PHASES] <br>
-     • First place a bet using the '+' and '-' buttons. <br>
-     • Once you're done, click on the start button. <br>    
-     • Five cards will be dealt. <br>
-     • You are allowed to swap out any of these five cards. <br>      
-     • You can select cards you wish to swap by clicking them directly. <br>
-     • You can unselect a selected card by clicking on it again. <br>
-     • Once you're done, click on the confirm button. <br>
-     • Selected cards are replaced and the outcome of the round is determined. <br>
-     • Click on the end button, to end the current round and proceed to the next round. <br>  
+     First place a bet using the '+' and '-' buttons. <br>
+     Once you're done, click on the start button. <br>    
+     Five cards will be dealt. <br>
+     You are allowed to swap out any of these five cards. <br>      
+     You can select cards you wish to swap by clicking them directly. <br>
+     You can deselect a selected card by clicking on it again. <br>
+     Once you're done, click on the confirm button. <br>
+     Selected cards will be replaced and the outcome of the round is determined. <br>
+     Click on the next button, to start the next round. <br>  
    `
 }
 
@@ -644,13 +644,14 @@ const phaseResult = function() {
     document.querySelector(".btn-poker").innerText = "EXIT"
     createText(".point-area", "")
     createText(".bet-area", "") 
-    createText(".message", `You have 0 points left!`)
+    createText(".message", `OH NO, YOU LOST THIS ROUND!<br>YOU HAVE 0 POINTS LEFT.`)    
   }
-  else if (points >= 100) {    
+  else if (points >= 100) {  
+    let prevMsg =  document.querySelector(".message").innerHTML
     document.querySelector(".btn-poker").innerText = "CONTINUE"
     createText(".point-area", "")
     createText(".bet-area", "") 
-    createText(".message", `You have accumulated ${points} points!`)
+    createText(".message", `${prevMsg}<br>YOU HAVE ACHIEVED ${points} POINTS`)
     document.querySelector(".point-bar").setAttribute("value", "100")
   } 
 }
