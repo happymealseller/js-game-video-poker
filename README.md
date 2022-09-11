@@ -1,5 +1,5 @@
 # VIDEO POKER: COUNTING CARDS 
-<b> PLAY HERE: https://happymealseller.github.io/visual-novel-style-poker/</b>
+<b> PLAY HERE: https://happymealseller.github.io/js-game-video-poker/ </b>
 # 
 <ul> 
   <li>Works on Mobile and PC.</li>
